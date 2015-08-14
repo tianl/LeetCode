@@ -7,7 +7,7 @@ public:
         int dist = INT_MAX;
         for (int i = 0, index1 = -1, index2 = -1; i < words.size(); ++i) {
             if (words[i] == word1) {
-                if (index1 != -1) {
+                if (word1 == word2 && index1 != -1) {
                     dist = min(dist, abs(index1 - i));
                 }
                 index1 = i;
